@@ -1,5 +1,4 @@
-
-import './App.css';
+import './cssFiles/App.css';
 import QuestionsContainer from './container/QuestionsContainer';
 
 function App() {

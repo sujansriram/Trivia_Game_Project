@@ -1,0 +1,9 @@
+form {
+    display: flex;
+    justify-content: space-around;
+    max-height: 30px;
+  }
+
+h2 {
+    margin: 0;
+}

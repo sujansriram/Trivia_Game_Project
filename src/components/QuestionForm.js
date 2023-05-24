@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../cssFiles/Form.css';
 
 const QuestionForm = ({categories, handleFilter}) => {
 

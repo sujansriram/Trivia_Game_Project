@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import QuestionList from "../components/QuestionList";
 import QuestionForm from "../components/QuestionForm";
+import '../cssFiles/Container.css';
 
 const QuestionsContainer = () => {
 

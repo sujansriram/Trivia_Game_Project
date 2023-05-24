@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../cssFiles/Question.css';
 
 const Question = ({question, changeScore, scoreCounter, questionNumber}) => {
 
@@ -31,6 +32,7 @@ const Question = ({question, changeScore, scoreCounter, questionNumber}) => {
 
     const optionButtons = shuffleArray(options).map((option) => {
         return <button 
+            class="options_button"
             onClick={handleClick} 
             value={option}
             disabled={answered}>{option.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}</button>
@@ -38,14 +40,14 @@ const Question = ({question, changeScore, scoreCounter, questionNumber}) => {
 
     return ( 
         <>
-            <h3>{`${questionNumber}. ${question.question.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}`}</h3>
-            {/* <button 
-                onClick={handleClick} 
-                value="true"
-                disabled={answered}>{question.correct_answer}</button>
-            {incorrectAnswers} */}
-            {optionButtons}
-            <p>{result}</p>
+            <div class="question">
+                <h3>{`${questionNumber}. ${question.question.replace(/&quot;/g, '"').replace(/&#039;/g, "'")}`}</h3>
+                    <div class="options">
+                        {optionButtons}
+                    </div>
+                <p>{result}</p>
+            </div>
+            
         </>
      );
 }
